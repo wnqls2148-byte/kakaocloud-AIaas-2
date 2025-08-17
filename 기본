@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML 기초 시작하기</title>
+</head>
+
+<body>
+    <h1>HTML 기본 구조</h1>
+    <p>이 문서는 순수 HTML만 사용했습니다.</p>
+</body>
+
+</html>

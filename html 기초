@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[AIaaS 2기] HTML 기초 복습 & Velog 스타일 미니 클론(HTML만)</title>
+</head>
+<body>
+
+  <!-- 1) 레퍼런스 확인 & 목표 -->
+  <header>
+    <h1>[스나이퍼팩토리] 카카오클라우드 - AIaaS 마스터 클래스 2기</h1>
+    <p>HTML 기초 복습 & Velog 스타일 클론(HTML만)</p>
+    <!-- 캡처 자리 -->
+    <figure>
+      <img src="YOUR_IMAGE_URL_1" alt="레퍼런스 확인 화면" width="320">
+      <figcaption>Action/Result 흐름으로 과제 진행</figcaption>
+    </figure>
+  </header>
+
+  <main id="posts">
+    <!-- 2) 기본 문서 생성 -->
+    <section aria-labelledby="basic-structure">
+      <h2 id="basic-structure">기본 문서 구조 출력</h2>
+      <h3>결과 화면</h3>
+      <p>제목/문단이 정상 표시되고, 모바일에서도 글자 배율이 자연스럽다.</p>
+      <figure>
+        <img src="YOUR_IMAGE_URL_2" alt="기본 구조 출력 캡처" width="320">
+        <figcaption>기본 구조 결과</figcaption>
+      </figure>
+      <!-- 참고로 실제 코드는 아래 전체 문서가 해당 -->
+    </section>
+
+    <!-- 3) 의미론적 레이아웃 -->
+    <section aria-labelledby="semantic">
+      <h2 id="semantic">의미론적 태그로 레이아웃 골격</h2>
+      <header>
+        <h3>MyBlog</h3>
+        <nav>
+          <a href="#posts">Posts</a>
+          <a href="#tags">Tags</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
+      <p>CSS가 없어도 정보구조가 또렷하고, 보조공학 접근성에도 유리하다.</p>
+      <figure>
+        <img src="YOUR_IMAGE_URL_3" alt="헤더/내비/메인/푸터 골격" width="320">
+        <figcaption>레이아웃 골격 결과</figcaption>
+      </figure>
+    </section>
+
+    <!-- 4) 블록 vs 인라인 -->
+    <section aria-labelledby="block-inline">
+      <h2 id="block-inline">블록 vs 인라인 확인</h2>
+      <div>블록 요소: 한 줄 전체를 차지</div>
+      <p>문장 안의 <span>인라인 요소</span>와 <a href="#">링크</a> 예시</p>
+      <figure>
+        <img src="YOUR_IMAGE_URL_4" alt="블록/인라인 차이 캡처" width="320">
+        <figcaption>개발자 도구로 박스 차이 확인</figcaption>
+      </figure>
+    </section>
+
+    <!-- 5) 이미지/링크 기본 속성 -->
+    <section aria-labelledby="media-link">
+      <h2 id="media-link">이미지와 링크 기본 속성 점검</h2>
+      <figure>
+        <img src="YOUR_THUMB_1" alt="포스트 1 대표 이미지" width="300">
+        <figcaption>이미지 설명(접근성)</figcaption>
+      </figure>
+      <p>
+        <a href="https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+           title="MDN 문서로 이동">MDN - HTML 시작하기</a>
+      </p>
+      <figure>
+        <img src="YOUR_IMAGE_URL_5" alt="이미지/링크 테스트 캡처" width="320">
+        <figcaption>이미지/링크 결과</figcaption>
+      </figure>
+    </section>
+
+    <!-- 6) 리스트/표/폼 -->
+    <section aria-labelledby="components">
+      <h2 id="components">리스트/표/폼 — 과제 인증 요소</h2>
+
+      <h3>체크리스트</h3>
+      <ol>
+        <li>문서 골격 만들기</li>
+        <li>의미론적 레이아웃</li>
+        <li>이미지/표/폼 점검</li>
+      </ol>
+
+      <h3>점수표</h3>
+      <table border="1">
+        <tr><th>과목</th><th>점수</th></tr>
+        <tr><td>HTML</td><td>95</td></tr>
+      </table>
+
+      <h3>간단 폼</h3>
+      <form action="#" autocomplete="on">
+        <label for="email">이메일</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+        <button type="submit">제출</button>
+      </form>
+
+      <figure>
+        <img src="YOUR_IMAGE_URL_6" alt="리스트/표/폼 결과 캡처" width="320">
+        <figcaption>브라우저 기본 검증 동작 확인</figcaption>
+      </figure>
+    </section>
+
+    <!-- 7) Velog 스타일 카드 3개 -->
+    <section aria-labelledby="cards">
+      <h2 id="cards">Velog 스타일 “포스트 카드”(HTML만)</h2>
+
+      <article class="post-card">
+        <a href="POST_1_URL">
+          <img src="YOUR_THUMB_1" alt="포스트 1 대표 이미지" width="320" height="180">
+        </a>
+        <header>
+          <h3><a href="POST_1_URL">[TIL] HTML 의미론적 태그 정리</a></h3>
+          <time datetime="2025-08-09">2025.08.09</time>
+        </header>
+        <p class="excerpt">header/nav/main/section/article/footer 역할 요약.</p>
+        <ul class="tags">
+          <li><a href="#tags-html">#HTML</a></li>
+          <li><a href="#tags-til">#TIL</a></li>
+        </ul>
+        <footer class="meta"><span>♥ 6</span> <span>💬 2</span></footer>
+      </article>
+
+      <article class="post-card">
+        <a href="POST_2_URL">
+          <img src="YOUR_THUMB_2" alt="포스트 2 대표 이미지" width="320" height="180">
+        </a>
+        <header>
+          <h3><a href="POST_2_URL">Flexbox로 카드 리스트 만들기</a></h3>
+          <time datetime="2025-08-08">2025.08.08</time>
+        </header>
+        <p class="excerpt">gap/justify-content/align-items 기초.</p>
+        <ul class="tags">
+          <li><a href="#tags-css">#CSS</a></li>
+          <li><a href="#tags-flexbox">#flexbox</a></li>
+        </ul>
+        <footer class="meta"><span>♥ 4</span> <span>💬 1</span></footer>
+      </article>
+
+      <article class="post-card">
+        <a href="POST_3_URL">
+          <img src="YOUR_THUMB_3" alt="포스트 3 대표 이미지" width="320" height="180">
+        </a>
+        <header>
+          <h3><a href="POST_3_URL">MDN + W3Schools 복습 루틴</a></h3>
+          <time datetime="2025-08-07">2025.08.07</time>
+        </header>
+        <p class="excerpt">레퍼런스→예제 재작성→미니 클론 순서 학습.</p>
+        <ul class="tags">
+          <li><a href="#tags-study">#study</a></li>
+          <li><a href="#tags-mdn">#MDN</a></li>
+        </ul>
+        <footer class="meta"><span>♥ 3</span> <span>💬 0</span></footer>
+      </article>
+
+      <figure>
+        <img src="YOUR_IMAGE_URL_7" alt="카드 구조 결과 캡처" width="320">
+        <figcaption>CSS 없이 구조만 반복</figcaption>
+      </figure>
+    </section>
+
+    <!-- 8) 태그 인덱스 & About -->
+    <aside id="tags" aria-label="태그 인덱스">
+      <h2>Tags</h2>
+      <ul>
+        <li id="tags-html"><a href="#posts">HTML</a></li>
+        <li id="tags-css"><a href="#posts">CSS</a></li>
+        <li id="tags-flexbox"><a href="#posts">flexbox</a></li>
+        <li id="tags-til"><a href="#posts">TIL</a></li>
+        <li id="tags-mdn"><a href="#posts">MDN</a></li>
+        <li id="tags-study"><a href="#posts">study</a></li>
+      </ul>
+    </aside>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>학습 기록을 남기는 공간. HTML/CSS/JS 실습과 클론 코딩 중심.</p>
+      <figure>
+        <img src="YOUR_IMAGE_URL_8" alt="태그/어바웃 영역 캡처" width="320">
+        <figcaption>보조 정보 분리</figcaption>
+      </figure>
+    </section>
+
+    <!-- 9) 최종 & 계획 -->
+    <section aria-labelledby="final">
+      <h2 id="final">미니 클론 결과 & 다음 계획</h2>
+      <p>HTML만으로 1장 구성 완료. 다음 단계는 Normalize/Reset + Flex/Grid + 미디어쿼리로 카드 정렬과 반응형을 추가.</p>
+      <figure>
+        <img src="YOUR_IMAGE_URL_9" alt="최종 미니 클론 캡처" width="320">
+        <figcaption>최종 정리</figcaption>
+      </figure>
+    </section>
+
+    <!-- 제출 체크리스트 -->
+    <section aria-labelledby="checklist">
+      <h2 id="checklist">체크리스트(제출 전)</h2>
+      <ul>
+        <li>의미론적 태그(헤더/메인/푸터)</li>
+        <li>블록/인라인 예시</li>
+        <li>이미지 1장 이상 + alt</li>
+        <li>리스트/표/폼 기본 예시</li>
+        <li>카드 3개 이상</li>
+        <li>하단 문구/해시태그</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- 하단 문구 & 해시태그 -->
+  <footer>
+    <p>본 후기는 [카카오엔터프라이즈x스나이퍼팩토리] 카카오클라우드로 배우는 AIaaS 마스터 클래스 2기(B-log) 리뷰로 작성 되었습니다.</p>
+    <p>#카카오클라우드 #AIaaS마스터클래스2기 #AIaaS #카카오엔터프라이즈 #한국생산성본부 #스나이퍼팩토리 #부트캠프 #개발자교육 #클라우드개발자 #클라우드엔지니어</p>
+  </footer>
+
+</body>
+</html>
