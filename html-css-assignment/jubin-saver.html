@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>주빈이의 JS 연습</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="text">안녕하세요! 👋</h1>
+    <button onclick="changeText()">눌러보세요!</button>
+
+    <script>
+        function changeText() {
+            const target = document.getElementById("text");
+            target.innerText = "주빈이 JS 마스터 중! 🧡";
+        }
+    </script>
+</body>
+
+</html>
